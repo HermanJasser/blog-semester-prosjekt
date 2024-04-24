@@ -6,7 +6,9 @@ const isLoggedIn = () => {
 
     if (token && username) {
         //console.log ("Logged in");
-        loggedInOut.innerHTML = `Hei, <strong>${username}<strong><br><button id="logout">Log out</button>`;
+        loggedInOut.innerHTML = `Hei, <strong>${username}<strong>
+        <a href="./mypage.html">Min side</a>
+        <button id="logout">Log out</button>`;
         document.querySelector("button#logout").addEventListener("click", () => {
             localStorage.removeItem("username");
             localStorage.removeItem("token");
@@ -20,3 +22,4 @@ const isLoggedIn = () => {
 }
 
 window.addEventListener("load", isLoggedIn);
+

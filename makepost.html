@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/makepost.js" defer></script>
+    <script src="./js/utils.js" defer></script>
+    <link rel="stylesheet" href="./stylesheet.css">
+    <title>Skriv post</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html">Hjem</a>
+        <a href="./posts.html">Blog</a>
+        <div id="logged-in-out"></div>
+    </header>
+    <main>
+        <form id="add-post-form">
+            <label for="title">Tittel</label>
+            <input name="title" type="text">
+
+            <label for="content">Innhold</label>
+            <textarea name="content" id="add-post-content" cols="30" rows="10"></textarea>
+            
+            <label for="img">Link til bilde</label>
+            <input name="img" type="utl">
+            <p>https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=</p>
+
+            <button type="submit">Legg ut</button>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+</html>

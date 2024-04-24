@@ -1,5 +1,7 @@
 
+/*brukte demoen din som veilder for å lage login prossesen. link: https://github.com/mitthrawnuruodo/demo-2024-02-06/tree/main*/
 const loginForm = document.getElementById("login-form");
+
 
 //console.log(loginForm);
 
@@ -42,6 +44,12 @@ async function getToken(email, password) {
         }
     } catch (error) {
         console.error(error.message);
+        const wrong = document.getElementById("wrong");
+
+        wrong.innerText = "";
+        wrong.innerText = "Feil Email eller passord";
+
+
     }
 }
 
