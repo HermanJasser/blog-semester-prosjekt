@@ -27,10 +27,10 @@ function listPostsMyPage(api) {
     for (let post of api) {
       postContainer += `
       <div class="single-post-overview">
-      <img class="posts-overview-img" src="${post.media.url}" alt=""></img>
+      <img class="posts-overview-img" src="${post.media.url}" alt="">
      <h2>${post.title}</h2>
+     <a href="./editpost.html?id=${post.id}">Redigere</a>
      <button id="${post.id}">Slett</button>
-     
     </div>`;
     }
     postOverviewCont.innerHTML = postContainer;
@@ -66,7 +66,7 @@ function listPostsMyPage(api) {
         
         //console.log(username);
         const response = await fetch(`https://v2.api.noroff.dev/blog/posts/${username}/${id}/`, options);
-        //window.location.reload();
+        window.location.reload();
     }
     catch (error){
         console.log(error.message);

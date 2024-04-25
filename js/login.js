@@ -38,7 +38,7 @@ async function getToken(email, password) {
             //console.log(data);
             localStorage.setItem("username", data.data.name);
             localStorage.setItem("token", data.data.accessToken);
-            window.location = "index.html";
+            window.location = "./mypage.html";
         } else {
             throw new Error(response.statusText);
         }

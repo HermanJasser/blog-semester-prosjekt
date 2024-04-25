@@ -37,7 +37,7 @@ try{
     console.log(username);
     const response = await fetch(`https://v2.api.noroff.dev/blog/posts/${username}/`, options);
     const data = await response.json();
-    //window.location = "mypage.html";
+    window.location = "mypage.html";
 }
 catch (error){
     console.log(error.message);
