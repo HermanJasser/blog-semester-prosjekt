@@ -3,27 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./js/makepost.js" defer></script>
-    <script src="./js/utils.js" defer></script>
+    <script src="./js/makepost.js" type="module"></script>
+       <!-- <script src="./js/utils.js" defer></script>-->
     <link rel="stylesheet" href="./stylesheet.css">
     <title>Skriv post</title>
 </head>
 <body>
     <header>
-        <a href="./index.html">Hjem</a>
-        <a href="./posts.html">Blog</a>
-        <div id="logged-in-out"></div>
-    </header>
+        <a class="logo" href="./index.html"
+          >Ski feber
+          <h3>Eventyr i norske snølandskap</h3></a>
+          <!--Brukte denne guiden som hjelp for naven https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci-->
+        <nav class="header-nav">
+          <ul class="nav-menu">
+            <li class="nav-link"><a href="./index.html">Hjem</a></li>
+            <li class="nav-link"><a href="./posts.html">Blog</a></li>
+            <li class="nav-link" id="logged-in-out">Laster...</li>
+            <li class="nav-link" id="log-out-btn-cont">laster...</li>
+          </ul>
+    
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </header>
     <main>
         <form id="add-post-form">
             <label for="title">Tittel</label>
-            <input name="title" type="text">
+            <input name="title" type="text" required>
 
             <label for="content">Innhold</label>
-            <textarea name="content" id="add-post-content" cols="30" rows="10"></textarea>
+            <textarea name="content" id="add-post-content" cols="30" rows="10" required></textarea>
             
             <label for="img">Link til bilde</label>
-            <input name="img" type="url">
+            <input name="img" type="url" required>
             <p>https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=</p>
 
             <button type="submit">Legg ut</button>

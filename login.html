@@ -4,21 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./stylesheet.css" />
-    <script src="./js/login.js" defer></script>
+    <script src="./js/login.js" type="module"></script>
     <title>Logg inn</title>
   </head>
   <body>
     <header>
-        <a href="./index.html">Hjem</a>
-        <a href="./posts.html">Blog</a>
+      <a class="logo" href="./index.html"
+        >Ski feber
+        <h3>Eventyr i norske snølandskap</h3></a>
+        <!--Brukte denne guiden som hjelp for naven https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci-->
+      <nav class="header-nav">
+        <ul class="nav-menu login-nav-menu">
+          <li class="nav-link"><a href="./index.html">Hjem</a></li>
+          <li class="nav-link"><a href="./posts.html">Blog</a></li>
+        </ul>
+  
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
     </header>
     <main id="main-login">
       <h1>Logg inn</h1>
       <form id="login-form">
         <label for="email">Email</label>
-        <input name="email" id="email" type="text" />
+        <input name="email" id="email" type="text" required/>
         <label for="password">Passord</label>
-        <input name="password" id="password" type="text" />
+        <input name="password" id="password" type="text" required/>
         <button type="submit">Logg inn</button>
         <p id="wrong"></p>
       </form>

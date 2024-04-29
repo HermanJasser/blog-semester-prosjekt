@@ -1,3 +1,10 @@
+import { isLoggedIn, loggedInAccess, hamburgerMenu } from './utils.js';
+
+hamburgerMenu();
+
+window.addEventListener("load", isLoggedIn);
+window.addEventListener("load", loggedInAccess);
+
 const addPostForm = document.getElementById("add-post-form");
 
 //console.log(addPostForm);

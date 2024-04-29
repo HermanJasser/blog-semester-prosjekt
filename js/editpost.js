@@ -1,3 +1,9 @@
+import { isLoggedIn, loggedInAccess, hamburgerMenu } from './utils.js';
+hamburgerMenu();
+
+window.addEventListener("load", isLoggedIn);
+window.addEventListener("load", loggedInAccess);
+
 const editPostForm = document.getElementById("edit-post-form");
 //console.log(editPostForm);
 
@@ -43,7 +49,7 @@ async function editPostToApi(title, content, img){
     try{
         let accessToken = localStorage.getItem("token");
         let username = localStorage.getItem("username"); 
-        console.log(accessToken);
+        //console.log(accessToken);
         const options = {
             method: "PUT",
             headers: {
@@ -60,7 +66,7 @@ async function editPostToApi(title, content, img){
         };
         const response = await fetch(`https://v2.api.noroff.dev/blog/posts/${username}/${id}`, options);
         const data = await response.json();
-        console.log(data)
+        //console.log(data)
         window.location = "mypage.html";
     }
     catch (error){

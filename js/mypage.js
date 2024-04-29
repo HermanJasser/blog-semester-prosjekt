@@ -1,3 +1,9 @@
+import { isLoggedIn, loggedInAccess, hamburgerMenu } from './utils.js';
+hamburgerMenu();
+
+window.addEventListener("load", isLoggedIn);
+window.addEventListener("load", loggedInAccess);
+
 let username = localStorage.getItem("username"); 
 let postOverviewCont = document.getElementById("posts-overview")
 //console.log(postOverviewCont);
@@ -9,7 +15,7 @@ async function findPostsFromApi() {
         const response = await fetch(api);
         if (!response.ok) throw new Error(`HTTP error! ${response.status}`);
         const data = await response.json();
-        postsApi = data.data;
+        const postsApi = data.data;
         //console.log(postsApi);
         listPostsMyPage(postsApi)
 

@@ -3,19 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./js/posts.js" defer></script>
-    <script src="./js/utils.js" defer></script>
+    <script src="./js/posts.js" type="module"></script>
+       <!-- <script src="./js/utils.js" defer></script>-->
     <link rel="stylesheet" href="./stylesheet.css">
     <title>Blog posts</title>
 </head>
 <body>
     <header>
-        <a href="./index.html">Hjem</a>
-        <a href="./posts.html">Blog</a>
-        <div id="logged-in-out"></div>
-    </header>
+        <a class="logo" href="./index.html"
+          >Ski feber
+          <h3>Eventyr i norske snølandskap</h3></a>
+          <!--Brukte denne guiden som hjelp for naven https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci-->
+        <nav class="header-nav">
+          <ul class="nav-menu">
+            <li class="nav-link"><a href="./index.html">Hjem</a></li>
+            <li class="nav-link"><a href="./posts.html">Blog</a></li>
+            <li class="nav-link" id="logged-in-out">Laster...</li>
+            <li class="nav-link" id="log-out-btn-cont">laster...</li>
+          </ul>
+    
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </header>
     <main class="main-posts">
 
     </main>
+
+    <footer></footer>
 </body>
 </html>

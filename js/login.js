@@ -1,3 +1,18 @@
+import { hamburgerMenu } from './utils.js';
+
+hamburgerMenu();
+
+/*dette er for å sjekke om du allerede er logget inn*/
+
+const alreadyLoggedIn = () => {
+    let token = localStorage.getItem("token");
+    let username = localStorage.getItem("username"); 
+if (token && username){
+    window.location = "./mypage.html"; 
+}
+}
+
+alreadyLoggedIn();
 
 /*brukte demoen din som veilder for å lage login prossesen. link: https://github.com/mitthrawnuruodo/demo-2024-02-06/tree/main*/
 const loginForm = document.getElementById("login-form");
@@ -7,13 +22,13 @@ const loginForm = document.getElementById("login-form");
 
 loginForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    //console.log("prøver å logge inn");
+   
     const email = loginForm.email.value.trim();
     const password = loginForm.password.value.trim()
     //console.log("email: ", email);
     //console.log("password: ", password);
     if (email && password) {
-        //console.log("Going to get token")
+    
         getToken(email, password)
     }
 });
@@ -52,4 +67,6 @@ async function getToken(email, password) {
 
     }
 }
+
+
 

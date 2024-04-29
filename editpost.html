@@ -4,27 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./stylesheet.css">
-    <script src="./js/editpost.js" defer></script>
-    <script src="./js/utils.js" defer></script>
+    <script src="./js/editpost.js" type="module"></script>
+       <!-- <script src="./js/utils.js" defer></script>-->
     <title>Rediger posts</title>
 </head>
 <body>
     <header>
-        <a href="./index.html">Hjem</a>
-        <a href="./posts.html">Blog</a>
-        <div id="logged-in-out"></div>
-    </header>
+        <a class="logo" href="./index.html"
+          >Ski feber
+          <h3>Eventyr i norske snølandskap</h3></a>
+          <!--Brukte denne guiden som hjelp for naven https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci-->
+        <nav class="header-nav">
+          <ul class="nav-menu">
+            <li class="nav-link"><a href="./index.html">Hjem</a></li>
+            <li class="nav-link"><a href="./posts.html">Blog</a></li>
+            <li class="nav-link" id="logged-in-out">Laster...</li>
+            <li class="nav-link" id="log-out-btn-cont">laster...</li>
+          </ul>
+    
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </header>
     <main id="main-edit-post">
         <h1>Rediger posten din</h1>
         <form id="edit-post-form">
             <label for="title">Tittel</label>
-            <input name="title" type="text">
+            <input name="title" type="text" required>
 
             <label for="content">Innhold</label>
-            <textarea name="content" id="edit-post-content" cols="30" rows="10"></textarea>
+            <textarea name="content" id="edit-post-content" cols="30" rows="10" required></textarea>
             
             <label for="img">Link til bilde</label>
-            <input name="img" type="url">
+            <input name="img" type="url" required>
 
             <button type="submit">Legg ut</button>
         </form>
