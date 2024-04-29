@@ -27,7 +27,7 @@ body{
 
 h1{
     font-family: var(--headerfont);
-    font-size: 80px;
+    font-size: 60px;
     color: var(--black);
 }
 
@@ -60,6 +60,24 @@ p{
     font-size: 30px;
     min-width: 200px;
 
+}
+
+.cta-button{
+    font-family: var(--innholdsfont);
+    background-color: var(--dark-blue);
+    color: var(--light-blue);
+    font-size: 25px;
+    padding: 8px 40px;
+    border: none;
+    border-radius: 100px;
+    
+}
+
+.cta-button:hover{
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+    border: var(--dark-blue) 2px solid;
+   
 }
 
 
@@ -185,6 +203,30 @@ form{
     width: 1000px;
     padding: 20px 0;
     border-bottom: 1px solid rgb(109, 109, 109);
+}
+
+
+#login-form input{
+    padding-left: 20px;
+    font-size: 20px;
+    height: 30px;
+    width: 300px;
+    border: none;/**/
+    border-radius: 10px;
+    border-bottom: var(--black) solid 2px;
+    margin-bottom: 25px;
+}
+
+#login-form input:focus{
+   outline: none;
+}
+
+
+
+#wrong{
+    font-family: var(--innholdsfont);
+    color: var(--red);
+    font-size: 20px;
 }
 
 /*media for tablet og ned*/

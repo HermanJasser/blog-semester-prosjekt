@@ -25,8 +25,8 @@ loginForm.addEventListener("submit", (event) => {
    
     const email = loginForm.email.value.trim();
     const password = loginForm.password.value.trim()
-    //console.log("email: ", email);
-    //console.log("password: ", password);
+    //console.log(email);
+    //console.log(password);
     if (email && password) {
     
         getToken(email, password)
@@ -36,6 +36,7 @@ loginForm.addEventListener("submit", (event) => {
 
 async function getToken(email, password) {
     try {
+       
         const options = {
             method: "post",
             headers: {
@@ -55,16 +56,16 @@ async function getToken(email, password) {
             localStorage.setItem("token", data.data.accessToken);
             window.location = "./mypage.html";
         } else {
+            
             throw new Error(response.statusText);
+            
         }
     } catch (error) {
         console.error(error.message);
-        const wrong = document.getElementById("wrong");
 
+        const wrong = document.getElementById("wrong");
         wrong.innerText = "";
         wrong.innerText = "Feil Email eller passord";
-
-
     }
 }
 
