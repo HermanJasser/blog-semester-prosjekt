@@ -6,13 +6,12 @@
     --light-blue: #EAF8FF;
     --dark-blue: #0059A1;
     --black: #000000;
-    --inline-margin-phone: 40px;
+    --inline-margin-phone: 20px;
     --inline-margin-tablet-desktop: 60px;
     --inline-margin-big-desktop: 150px;
     --innholdsfont: "Roboto", sans-serif;
     --logofont: "Racing Sans One", sans-serif;
     --headerfont: "Antonio", sans-serif
-
 }
 
 body{
@@ -232,7 +231,7 @@ main{
     justify-content: center;
 }
 
-#main-edit-post, #main-my-page, #main-makepost{
+#main-edit-post, #main-my-page, #main-makepost, #main-posts{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -270,6 +269,7 @@ main{
 font-size: 25px;
 font-family: var(--innholdsfont);
 color: var(--dark-blue);
+text-align: center;
 }
 
 #main-my-page > a:hover, .single-post-overview a:hover, .single-post-overview button:hover{
@@ -330,7 +330,7 @@ color: var(--dark-blue);
 
 #add-post-form, #edit-post-form{
     width: 100%;
-    max-width: 1500px;
+    max-width: 1000px;
     padding: 0 var(--inline-margin-big-desktop);
     box-sizing: border-box;
 }
@@ -361,17 +361,28 @@ color: var(--dark-blue);
     margin: 0 0 10px 25px;
 }
 
+/*dette er for posts siden*/
+
+
+
+
+
+
 
 /*media for mobil*/
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 580px){
     header{
-        padding: 0 var(--inline-margin-phone);
+        padding: 0 var(--inline-margin-phone) !important;
     }
 
     /*dette er for makepost og editpost*/
     #add-post-form, #edit-post-form{
-        padding: 0 var(--inline-margin-phone);
+        padding: 0 var(--inline-margin-phone) !important;
+    }
+
+    .single-post-overview{
+        margin: 0 var(--inline-margin-phone) !important;
     }
 }
 
@@ -379,6 +390,7 @@ color: var(--dark-blue);
 /*media for tablet og ned*/
 
 @media only screen and (max-width: 768px) {
+
     h1{
         font-size: 40px;
     }
