@@ -22,7 +22,7 @@ body{
     display: grid;
     grid-template-rows: 1fr auto;
     grid-template-columns: 100%;
-
+    box-sizing: border-box;
 }
 
 h1{
@@ -44,11 +44,13 @@ h3{
     margin: 0;
 }
 
-p{
+p, label{
     font-family: var(--innholdsfont);
     color: var(--black);
-    font-size: 25px;
+    font-size: 20px;
 }
+
+
 
 .logo{
     display: flex;
@@ -76,8 +78,22 @@ p{
 .cta-button:hover{
     background-color: var(--light-blue);
     color: var(--dark-blue);
-    border: var(--dark-blue) 2px solid;
+    outline: var(--dark-blue) 2px solid;
    
+}
+
+.choosen{
+    text-decoration: underline 2px !important; 
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button{
+    cursor: pointer;
 }
 
 
@@ -117,6 +133,15 @@ padding: 0 var(--inline-margin-big-desktop);
     font-size: 20px;
 }
 
+.header-nav li:hover{
+    transform: scale(1.1);
+}
+
+#log-out-btn-cont:hover{
+    transform: none;
+
+}
+
 .hamburger {
     display: none;
 }
@@ -144,6 +169,14 @@ padding: 0 var(--inline-margin-big-desktop);
     border-radius: 30px;
     font-size: 18px;
     border: none;
+   
+}
+
+#logout:hover{
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+    outline: var(--dark-blue) 2px solid;
+    
 }
 
 
@@ -153,58 +186,62 @@ padding: 0 var(--inline-margin-big-desktop);
 /*footer*/
 footer{
 background-color: var(--white);
-height: 200px;
+height: 180px;
 width: 100%;
 border-top: var(--dark-blue) solid 1px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 }
 
+
+.footer-nav{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin-top: 25px;
+    padding-bottom: 10px;
+}
+
+.footer-nav a{
+    color: var(--black);
+    font-family: var(--headerfont);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.footer-nav a:hover{
+transform: scale(1.1);
+}
+
+
+
+
+/*kode for main elementer*/
 main{
-    padding-top: 100px;
+    padding: 100px 0;
+    
+
 }
 
 #main-login{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
-#main-edit-post{
+#main-edit-post, #main-my-page, #main-makepost{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#main-my-page{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
 
-.posts-overview-img{
-    height: 70px;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    
-    
-}
 
-.single-post-overview{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 1000px;
-    padding: 20px 0;
-    border-bottom: 1px solid rgb(109, 109, 109);
-}
-
+/*dette er for login siden*/
 
 #login-form input{
     padding-left: 20px;
@@ -214,14 +251,12 @@ form{
     border: none;/**/
     border-radius: 10px;
     border-bottom: var(--black) solid 2px;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
 }
 
 #login-form input:focus{
    outline: none;
 }
-
-
 
 #wrong{
     font-family: var(--innholdsfont);
@@ -229,10 +264,133 @@ form{
     font-size: 20px;
 }
 
+/*dette er for min side*/
+
+#main-my-page > a{
+font-size: 25px;
+font-family: var(--innholdsfont);
+color: var(--dark-blue);
+}
+
+#main-my-page > a:hover, .single-post-overview a:hover, .single-post-overview button:hover{
+    text-decoration: none;
+}
+
+.posts-overview-img{
+    height: 70px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+#posts-overview{
+    display: flex;
+    flex-direction: column;
+}
+
+.single-post-overview{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50vw;
+    padding: 20px 0;
+    border-bottom: 1.5px solid var(--dark-blue);
+}
+
+.single-post-overview a{
+    font-size: 16px;
+    font-family: var(--innholdsfont);
+    color: var(--dark-blue);
+
+}
+
+.single-post-overview button{
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-family: var(--innholdsfont);
+    color: var(--red);
+    text-decoration: underline;
+}
+
+.single-post-img-text{
+    display: flex;
+    align-items: center;
+    width: 65%;
+    gap: 20px;
+}
+
+.single-post-edit-delete{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+}
+
+/*dette er for makepost og edit post*/
+
+#add-post-form, #edit-post-form{
+    width: 100%;
+    max-width: 1500px;
+    padding: 0 var(--inline-margin-big-desktop);
+    box-sizing: border-box;
+}
+
+#add-post-form > input, #edit-post-form > input{
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+    border: solid 1px var(--black);
+    margin-bottom: 25px;
+}
+
+#add-post-form > textarea, #edit-post-form > textarea{
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    border: solid 1px var(--black);
+    margin-bottom: 25px;
+    resize: none;
+}
+
+#add-post-form > input:focus, #edit-post-form > input:focus, #add-post-form > textarea:focus, #edit-post-form > textarea:focus{
+    outline: none;
+}
+
+#add-post-form > label, #edit-post-form > label{
+    align-self: flex-start;
+    margin: 0 0 10px 25px;
+}
+
+
+/*media for mobil*/
+
+@media only screen and (max-width: 500px){
+    header{
+        padding: 0 var(--inline-margin-phone);
+    }
+
+    /*dette er for makepost og editpost*/
+    #add-post-form, #edit-post-form{
+        padding: 0 var(--inline-margin-phone);
+    }
+}
+
+
 /*media for tablet og ned*/
 
 @media only screen and (max-width: 768px) {
+    h1{
+        font-size: 40px;
+    }
     
+    h2{
+        font-size: 30px;
+    }
+    
+    p, label{
+        font-size: 18px;
+    }
+
 /*for hamburger menyen*/
     .nav-menu {
         z-index: 98;
@@ -242,7 +400,6 @@ form{
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        padding-left: var(--inline-margin-tablet-desktop);
         padding-top: 50px;
         background-color: var(--white);
         width: 100%;
@@ -275,10 +432,37 @@ form{
         transform: translateY(-8px) rotate(-45deg);
     }
 
+    /*Dette er for mypage*/
+    .single-post-overview{
+        flex-direction: column;
+        gap: 20px;
+        width: auto;
+    }
+
+    .single-post-img-text{
+        width: 100%;
+        gap: 50px;
+    }
+    
+    .single-post-edit-delete{
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    
 }
 
 @media only screen and (max-width: 1100px){
     header{
         padding: 0 var(--inline-margin-tablet-desktop);
+    }
+
+    /*dette er for makepost og editpost*/
+    #add-post-form, #edit-post-form{
+        padding: 0 var(--inline-margin-tablet-desktop);
+    }
+
+    .single-post-overview{
+        margin: 0 var(--inline-margin-tablet-desktop);
     }
 }

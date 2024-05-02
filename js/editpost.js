@@ -25,6 +25,7 @@ async function getEditPostInfo(){
         editPostForm.title.value = postApi.title;
         editPostForm.content.value = postApi.body;
         editPostForm.img.value = postApi.media.url;
+        editPostForm.alt.value = postApi.media.alt;
     } 
     catch{
         console.error("Error message: " + error)
@@ -39,13 +40,14 @@ editPostForm.addEventListener("submit", (event) => {
     const title = editPostForm.title.value.trim();
     const content = editPostForm.content.value.trim();
     const  img = editPostForm.img.value.trim();
-    if (title && content) {
+    const  alt = editPostForm.alt.value.trim();
+    if (title && content && img && alt) {
         //console.log(title, content, img)
-        editPostToApi(title, content, img);
+        editPostToApi(title, content, img, alt);
     }
 });
 
-async function editPostToApi(title, content, img){  
+async function editPostToApi(title, content, img, alt){  
     try{
         let accessToken = localStorage.getItem("token");
         let username = localStorage.getItem("username"); 
@@ -60,7 +62,8 @@ async function editPostToApi(title, content, img){
                 "title": title,
                 "body": content,
                 "media": {
-                    "url": img
+                    "url": img,
+                    "alt": alt
                 } 
             }),
         };

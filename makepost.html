@@ -29,21 +29,36 @@
           </div>
         </nav>
       </header>
-    <main>
+    <main id="main-makepost">
+      <h1>Ny post</h1>
         <form id="add-post-form">
             <label for="title">Tittel</label>
             <input name="title" type="text" required>
 
             <label for="content">Innhold</label>
-            <textarea name="content" id="add-post-content" cols="30" rows="10" required></textarea>
+            <textarea name="content" id="add-post-content" maxlength ="2000" required></textarea>
             
-            <label for="img">Link til bilde</label>
+            <label for="img">Bilde (URL)</label>
             <input name="img" type="url" required>
-            <p>https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=</p>
 
-            <button type="submit">Legg ut</button>
+            <label for="alt">Gi bilde en beskrivelse</label>
+            <input name="alt" type="text" required>
+
+
+            <!--<p>https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=</p>-->
+
+            <button class="cta-button" type="submit">Legg ut</button>
         </form>
     </main>
-    <footer></footer>
+    <footer>
+        <a class="logo" href="./index.html"
+        >Ski feber
+        <h3>Eventyr i norske snølandskap</h3></a
+      >
+    <nav class="footer-nav">
+      <a href="./index.html">Hjem</a>
+      <a href="./posts.html">Blog</a>
+      </nav>
+    </footer>
 </body>
 </html>

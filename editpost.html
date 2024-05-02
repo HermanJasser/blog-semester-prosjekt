@@ -36,14 +36,26 @@
             <input name="title" type="text" required>
 
             <label for="content">Innhold</label>
-            <textarea name="content" id="edit-post-content" cols="30" rows="10" required></textarea>
+            <textarea name="content" id="edit-post-content" maxlength ="2000" required></textarea>
             
             <label for="img">Link til bilde</label>
             <input name="img" type="url" required>
 
-            <button type="submit">Legg ut</button>
+            <label for="alt">Gi bilde en beskrivelse</label>
+            <input name="alt" type="text" required>
+
+            <button class="cta-button" type="submit">Legg ut</button>
         </form>
     </main>
-    <footer></footer>
+    <footer>
+        <a class="logo" href="./index.html"
+        >Ski feber
+        <h3>Eventyr i norske snølandskap</h3></a
+      >
+    <nav class="footer-nav">
+      <a href="./index.html">Hjem</a>
+      <a href="./posts.html">Blog</a>
+      </nav>
+    </footer>
 </body>
 </html>

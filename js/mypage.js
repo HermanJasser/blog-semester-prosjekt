@@ -6,8 +6,14 @@ window.addEventListener("load", loggedInAccess);
 
 let username = localStorage.getItem("username"); 
 let postOverviewCont = document.getElementById("posts-overview")
-//console.log(postOverviewCont);
 
+//dette er for h1
+function setH1(username){
+let myPageH1 = document.getElementById("my-page-h1");
+//console.log(myPageH1);
+myPageH1.innerText = `Velkommen ${username}`;
+}
+setH1(username);
 
 async function findPostsFromApi() {
     try{
@@ -33,10 +39,14 @@ function listPostsMyPage(api) {
     for (let post of api) {
       postContainer += `
       <div class="single-post-overview">
-      <img class="posts-overview-img" src="${post.media.url}" alt="">
-     <h2>${post.title}</h2>
-     <a href="./editpost.html?id=${post.id}">Redigere</a>
-     <button id="${post.id}">Slett</button>
+        <div class="single-post-img-text">
+            <img class="posts-overview-img" src="${post.media.url}" alt="${post.media.alt}">
+            <h3>${post.title}</h3>
+        </div>
+        <div class="single-post-edit-delete">
+            <a href="./editpost.html?id=${post.id}">Redigere</a>
+            <button id="${post.id}">Slett</button>
+        </div>    
     </div>`;
     }
     postOverviewCont.innerHTML = postContainer;

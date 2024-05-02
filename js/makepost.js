@@ -13,14 +13,15 @@ addPostForm.addEventListener("submit", (event) => {
     const title = addPostForm.title.value.trim();
     const content = addPostForm.content.value.trim();
     const  img = addPostForm.img.value.trim();
+    const  alt = addPostForm.alt.value.trim();
     if (title && content) {
-        console.log(title, content, img)
-        addPostToApi(title, content, img);
+        //console.log(title, content, img, alt)
+        addPostToApi(title, content, img, alt);
     }
 });
 
 
-async function addPostToApi(title, content, img){  
+async function addPostToApi(title, content, img, alt){  
 try{
     let accessToken = localStorage.getItem("token");
     let username = localStorage.getItem("username"); 
@@ -35,7 +36,8 @@ try{
             "title": title,
             "body": content,
             "media": {
-                "url": img
+                "url": img,
+                "alt": alt  
             } 
         }),
     };
