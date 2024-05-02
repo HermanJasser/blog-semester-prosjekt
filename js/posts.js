@@ -4,13 +4,12 @@ hamburgerMenu();
 
 window.addEventListener("load", isLoggedIn);
 
-let username = localStorage.getItem("username"); 
 let allPostsCont = document.getElementById("all-posts");
 console.log(allPostsCont);
 
 async function getAllPosts() {
     try{
-        const api = `https://v2.api.noroff.dev/blog/posts/${username}/`;
+        const api = `https://v2.api.noroff.dev/blog/posts/hermanjasser/`;
         const response = await fetch(api);
         if (!response.ok) throw new Error(`HTTP error! ${response.status}`);
         const data = await response.json();
