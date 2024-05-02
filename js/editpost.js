@@ -11,7 +11,6 @@ let params = new URL(document.location).searchParams;
 let id = params.get("id");
 let username = localStorage.getItem("username"); 
 
-let ref = document.referrer;
 
 async function getEditPostInfo(){
     try{

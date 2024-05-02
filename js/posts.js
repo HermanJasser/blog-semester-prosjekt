@@ -14,7 +14,7 @@ async function getAllPosts() {
         if (!response.ok) throw new Error(`HTTP error! ${response.status}`);
         const data = await response.json();
         const postsApi = data.data;
-        console.log(postsApi);
+        //console.log(postsApi);
         listAllposts(postsApi);
     } catch (error){
         console.error("Error message: " + error)
@@ -29,11 +29,12 @@ function listAllposts(api){
     let cont = "";
     //console.log(api)
     for (let post of api) {
-        console.log(post.title);
-        cont += `<a class="single-post" href="./singlepost.html?id=${post.id}">
-        <img class="single-post-img" src="${post.media.url}" alt="${post.media.alt}">
-        <h2 class="single-post-title">${post.title}</h2>
-      </a>`;
+        //console.log(post.title);
+        cont += `
+        <a class="single-post" href="./singlepost.html?id=${post.id}">
+            <img class="single-post-img" src="${post.media.url}" alt="${post.media.alt}">
+            <h2 class="single-post-title">${post.title}</h2>
+        </a>`;
     }
     allPostsCont.innerHTML = cont;
 }
