@@ -38,7 +38,7 @@ h2{
 
 h3{
     font-family: var(--headerfont);
-    font-size: 15px;
+    font-size: 20px;
     color: var(--black);
     margin: 0;
 }
@@ -46,7 +46,7 @@ h3{
 p, label{
     font-family: var(--innholdsfont);
     color: var(--black);
-    font-size: 20px;
+    font-size: 25px;
 }
 
 
@@ -278,7 +278,7 @@ text-align: center;
 }
 
 .posts-overview-img{
-    height: 70px;
+    height: 90px;
     aspect-ratio: 16/9;
     object-fit: cover;
 }
@@ -298,7 +298,7 @@ text-align: center;
 }
 
 .single-post-overview a{
-    font-size: 16px;
+    font-size: 20px;
     font-family: var(--innholdsfont);
     color: var(--dark-blue);
 
@@ -307,7 +307,7 @@ text-align: center;
 .single-post-overview button{
     background: none;
     border: none;
-    font-size: 16px;
+    font-size: 20px;
     font-family: var(--innholdsfont);
     color: var(--red);
     text-decoration: underline;
@@ -387,7 +387,7 @@ text-align: center;
 
 .single-post-title{
     margin: 0;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 #all-posts{
@@ -400,40 +400,6 @@ text-align: center;
 
 
 /*Dette er for singlepost siden*/
-/*#main-single-post{
-    margin-inline: auto;
-    padding-inline: var(--inline-margin-big-desktop);
-    max-width: 1000px;
-    width: 73%;
-    
-}
-
-#main-single-post > img{
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    width: 100%;
-}
-
-#main-single-post > div{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-#main-single-post > div > p{
-    margin: 5px 0;
-    font-size: 18px;
-    color: var(--dark-blue);
-}
-
-#main-single-post > h1{
-    margin: 0 0 25px 0;
-}
-
-#main-single-post > p{
-    max-width: 700px;
-}*/
-
 #main-single-post{
     width: 100vw;
 }
@@ -518,11 +484,11 @@ text-align: center;
     }
     
     p, label{
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .single-post-title{
-        font-size: 18px;
+        font-size: 20px;
     }
 
     #main-single-post > div > h1{
