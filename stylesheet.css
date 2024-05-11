@@ -5,6 +5,7 @@
     --red: #930B0B;
     --light-blue: #EAF8FF;
     --dark-blue: #0059A1;
+    --dark-blue-50: #0058a17f;
     --black: #000000;
     --inline-margin-phone: 20px;
     --inline-margin-tablet-desktop: 60px;
@@ -71,6 +72,7 @@ p, label{
     padding: 8px 40px;
     border: none;
     border-radius: 100px;
+    text-decoration: none;
     
 }
 
@@ -232,12 +234,94 @@ main{
     justify-content: center;
 }
 
-#main-edit-post, #main-my-page, #main-makepost, #main-posts, #main-single-post{
+#main.index, #main-edit-post, #main-my-page, #main-makepost, #main-posts, #main-single-post{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+
+/*dette er for slideshow*/
+#slideshow{
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    overflow: hidden;
+    height: 45vw;
+    max-height: 700px;/**/
+    margin: 0 auto;
+    
+}
+#slideshow-cont{
+    width: 100%;
+}
+
+.single-slide{
+    display: none;
+}
+
+.display-slide{
+    display: block;
+}
+
+.slider-img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    
+}
+
+.next{
+right: 10px;
+padding: 0 0 2px 2px;
+}
+
+.prev{
+    left: 10px;
+    padding: 0 2px 2px 0;
+}
+
+.prev:hover, .next:hover{
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+    outline: var(--dark-blue) 2px solid;
+}
+
+
+
+.prev, .next{
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--dark-blue);
+    color:var(--light-blue);
+    border: none;
+    border-radius: 50px;
+    font-size: 40px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+}
+
+.single-slide-info-cont{
+    position: absolute;
+    transform: translatey(-50%);
+    top: 50%;
+    left: 15%;
+    width: 300px;
+    background-color: var(--dark-blue-50);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.single-slide-info-cont > h2{
+    margin: 0 0 20px 0 ;
+    text-align: center;
+    color: var(--white);
+}
 
 
 
@@ -445,31 +529,42 @@ text-align: center;
 }
 
 
-/*Media for mobil*/
-
-@media only screen and (max-width: 580px){
+@media only screen and (max-width: 1100px){
     header{
-        padding: 0 var(--inline-margin-phone) !important;
+        padding: 0 var(--inline-margin-tablet-desktop);
     }
 
-    /*dette er for makepost og editpost*/
     #add-post-form, #edit-post-form{
-        padding: 0 var(--inline-margin-phone) !important;
+        padding: 0 var(--inline-margin-tablet-desktop);
     }
 
     .single-post-overview{
-        margin: 0 var(--inline-margin-phone) !important;
+        margin: 0 var(--inline-margin-tablet-desktop);
     }
 
     #all-posts{
-        grid-template-columns: 1fr !important;
-        margin: 0 var(--inline-margin-phone) !important;
+        margin: 0 var(--inline-margin-tablet-desktop);
     }
 
     #main-single-post > div{
-        padding: 0  var(--inline-margin-phone) !important;
+        padding: 0 var(--inline-margin-tablet-desktop);
+    }
+
+    /*dette er for slidere*/
+    .single-slide-info-cont{
+        width: 200px;
+    }
+    .single-slide-info-cont > h2{
+        font-size: 30px;
+    }
+
+    .single-slide-info-cont > a{
+        font-size: 20px;
+        padding: 8px 30px;
     }
 }
+
+
 
 
 /*media for tablet og ned*/
@@ -537,6 +632,23 @@ text-align: center;
         transform: translateY(-8px) rotate(-45deg);
     }
 
+    /*dette er for slideren */
+
+    #slideshow{
+        height: 55vw;
+    }
+
+    .single-slide-info-cont{
+        width: 150px ;
+    }
+    .single-slide-info-cont > h2{
+        font-size: 20px !important;
+    }
+
+    .single-slide-info-cont > a{
+        font-size: 15px !important;
+        padding: 8px 20px !important;
+    }
     /*Dette er for mypage*/
     .single-post-overview{
         flex-direction: column;
@@ -558,28 +670,46 @@ text-align: center;
     #all-posts{
         grid-template-columns: 1fr 1fr;
     }
-    
+
 }
 
-@media only screen and (max-width: 1100px){
+
+/*Media for mobil*/
+
+@media only screen and (max-width: 580px){
     header{
-        padding: 0 var(--inline-margin-tablet-desktop);
+        padding: 0 var(--inline-margin-phone) !important;
     }
 
     /*dette er for makepost og editpost*/
     #add-post-form, #edit-post-form{
-        padding: 0 var(--inline-margin-tablet-desktop);
+        padding: 0 var(--inline-margin-phone) !important;
     }
 
     .single-post-overview{
-        margin: 0 var(--inline-margin-tablet-desktop);
+        margin: 0 var(--inline-margin-phone) !important;
     }
 
     #all-posts{
-        margin: 0 var(--inline-margin-tablet-desktop);
+        grid-template-columns: 1fr !important;
+        margin: 0 var(--inline-margin-phone) !important;
     }
 
     #main-single-post > div{
-        padding: 0 var(--inline-margin-tablet-desktop);
+        padding: 0  var(--inline-margin-phone) !important;
+    }
+
+    /*dette her er for slideren*/
+    .single-slide-info-cont{
+        width: 100px !important;
+        padding: 10px;
+    }
+    .single-slide-info-cont > h2{
+        font-size: 15px !important;
+    }
+
+    .single-slide-info-cont > a{
+        font-size: 10px !important;
+        padding: 4px 15px !important;
     }
 }
