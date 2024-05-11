@@ -440,6 +440,7 @@ text-align: center;
 #main-single-post > div > p{
     width: 100%;
     max-width: 700px;
+    white-space: pre-wrap;
     
 }
 
