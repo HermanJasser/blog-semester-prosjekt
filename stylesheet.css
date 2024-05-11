@@ -5,7 +5,7 @@
     --red: #930B0B;
     --light-blue: #EAF8FF;
     --dark-blue: #0059A1;
-    --dark-blue-50: #0058a17f;
+    --light-blue-50: #eaf8ff90;
     --black: #000000;
     --inline-margin-phone: 20px;
     --inline-margin-tablet-desktop: 60px;
@@ -80,7 +80,6 @@ p, label{
     background-color: var(--light-blue);
     color: var(--dark-blue);
     outline: var(--dark-blue) 2px solid;
-   
 }
 
 .choosen{
@@ -308,7 +307,7 @@ right: 10px;
     top: 50%;
     left: 15%;
     width: 300px;
-    background-color: var(--dark-blue-50);
+    background-color:var(--light-blue-50);
     padding: 20px;
     border-radius: 5px;
     display: flex;
@@ -319,7 +318,7 @@ right: 10px;
 .single-slide-info-cont > h2{
     margin: 0 0 20px 0 ;
     text-align: center;
-    color: var(--white);
+    -color: var(--white);
 }
 
 
@@ -649,9 +648,11 @@ text-align: center;
         padding: 8px 20px !important;
     }
 
-    .next, .prev{
-        transform: scale(0.5) translateY(-50%);
-        }
+    .prev, .next{
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+    }
 
 
     /*Dette er for mypage*/
@@ -682,6 +683,16 @@ text-align: center;
 /*Media for mobil*/
 
 @media only screen and (max-width: 580px){
+    .prev:hover, .next:hover{
+        background-color: var(--dark-blue);
+        color: var(--light-blue);
+        outline: none;
+    }
+    .cta-button:hover{
+        background-color: var(--dark-blue);
+        color: var(--light-blue) ;
+        outline: none ;
+    }
     header{
         padding: 0 var(--inline-margin-phone) !important;
     }

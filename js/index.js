@@ -56,7 +56,7 @@ function runSlider() {
 function initializeSlider(){
     if (allSlides.length > 0) {
         allSlides[slideIndex].classList.add("display-slide");
-        //intervalId = setInterval(nextSlide, 5000);
+        intervalId = setInterval(nextSlide, 5000);
     } else {
         console.error("No slides found.");
     }
@@ -94,6 +94,10 @@ function showSlide() {
     allSlides[slideIndex].classList.add("display-slide");
 }
 
+slideshowCont.addEventListener("mouseover", function(){ clearInterval(intervalId)});
+
+// Start a new timer when mouse out
+slideshowCont.addEventListener("mouseout", function(){ intervalId = setInterval(nextSlide, 5000);});
 
 
 
