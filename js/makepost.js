@@ -20,37 +20,37 @@ addPostForm.addEventListener("submit", (event) => {
     }
 });
 
+async function addPostToApi(title, content, img, alt) {
+    try {
+        let accessToken = localStorage.getItem("token");
+        let username = localStorage.getItem("username");
+        const options = {
+            method: "POST",
+            headers: {
+                Authorization: `Bearer ${accessToken}`,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                "title": title,
+                "body": content,
+                "media": {
+                    "url": img,
+                    "alt": alt
+                }
+            }),
+        };
 
-async function addPostToApi(title, content, img, alt){  
-try{
-    let accessToken = localStorage.getItem("token");
-    let username = localStorage.getItem("username"); 
-    //console.log(accessToken);
-    const options = {
-        method: "POST",
-        headers: {
-            Authorization: `Bearer ${accessToken}`, 
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ 
-            "title": title,
-            "body": content,
-            "media": {
-                "url": img,
-                "alt": alt  
-            } 
-        }),
-    };
-    //console.log(options);
-    
-    //console.log(username);
-    const response = await fetch(`https://v2.api.noroff.dev/blog/posts/${username}/`, options);
-    const data = await response.json();
-    window.location = "mypage.html";
+        const response = await fetch(`https://v2.api.noroff.dev/blog/posts/${username}/`, options);
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        window.location = "./mypage.html";
+    } catch (error) {
+        alert("Kan ikke legge ut posten. Sjekk at URLen er riktig")
+        console.error("En feil har skjedd:", error.message);
+    }
 }
-catch (error){
-    console.log(error.message);
-    throw new Error(response.statusText);
-    
-}
-}
+

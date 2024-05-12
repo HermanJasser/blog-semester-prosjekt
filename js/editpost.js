@@ -67,13 +67,15 @@ async function editPostToApi(title, content, img, alt){
             }),
         };
         const response = await fetch(`https://v2.api.noroff.dev/blog/posts/${username}/${id}`, options);
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
         const data = await response.json();
-        //console.log(data)
-        window.location = "mypage.html";
-    }
-    catch (error){
-        console.log(error.message);
-        throw new Error(response.statusText);
-        
+        window.location = "./mypage.html";
+    } catch (error) {
+        alert("Kan ikke redigere posten. Sjekk at URLen er riktig")
+        console.error("En feil har skjedd:", error.message);
     }
     }
