@@ -15,7 +15,7 @@
         document.querySelector("button#logout").addEventListener("click", () => {
             localStorage.removeItem("username");
             localStorage.removeItem("token");
-            window.location = "../post/index.html";
+            window.location = "/index.html";
         });
     } else {
         //console.log ("NOT Logged in");
