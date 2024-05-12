@@ -59,7 +59,7 @@ function initializeSlider(){
         allSlides[slideIndex].classList.add("display-slide");
         intervalId = setInterval(nextSlide, 5000);
     } else {
-        console.error("No slides found.");
+        console.error("ingen posts funnet");
     }
 }
 

@@ -25,7 +25,7 @@ async function addPostToApi(title, content, img, alt){
 try{
     let accessToken = localStorage.getItem("token");
     let username = localStorage.getItem("username"); 
-    console.log(accessToken);
+    //console.log(accessToken);
     const options = {
         method: "POST",
         headers: {
@@ -41,9 +41,9 @@ try{
             } 
         }),
     };
-    console.log(options);
+    //console.log(options);
     
-    console.log(username);
+    //console.log(username);
     const response = await fetch(`https://v2.api.noroff.dev/blog/posts/${username}/`, options);
     const data = await response.json();
     window.location = "mypage.html";

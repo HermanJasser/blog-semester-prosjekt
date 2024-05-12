@@ -5,7 +5,7 @@ hamburgerMenu();
 window.addEventListener("load", isLoggedIn);
 
 let allPostsCont = document.getElementById("all-posts");
-console.log(allPostsCont);
+//console.log(allPostsCont);
 
 async function getAllPosts() {
     try{
