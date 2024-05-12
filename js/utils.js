@@ -19,7 +19,11 @@
         });
     } else {
         //console.log ("NOT Logged in");
-        loggedInOut.innerHTML = `<a href="../account/login.html">Log inn</a>`;
+        if(window.location.pathname === "/index.html" || window.location.pathname === "/" || window.location.pathname === ""){
+        loggedInOut.innerHTML = `<a href="./account/login.html">Log inn</a>`;
+        } else{
+            loggedInOut.innerHTML = `<a href="../account/login.html">Log inn</a>`
+        }
     }
 }
 
