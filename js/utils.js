@@ -19,7 +19,7 @@
         });
     } else {
         //console.log ("NOT Logged in");
-        loggedInOut.innerHTML = `<a href="../account/login.html">Log inn</a>`;
+        loggedInOut.innerHTML = `<a href="/account/login.html">Log inn</a>`;
     }
 }
 
