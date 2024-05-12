@@ -14,12 +14,18 @@
         } else{
         loggedInOut.innerHTML = `<a href="../account/mypage.html">Min side</a>`;
         }
+
         logOutBtn.innerHTML = `<button id="logout">Log out</button>`;
         logOutBtn.style.display = "block";
         document.querySelector("button#logout").addEventListener("click", () => {
             localStorage.removeItem("username");
             localStorage.removeItem("token");
-            window.location = "./index.html";
+
+            if(window.location.pathname.includes("/index.html") || window.location.pathname === "/blog-semester-prosjekt/" || window.location.pathname == "/blog-semester-prosjekt"){
+                window.location = "./index.html";
+            }else{
+            window.location = "../index.html";
+            }
         });
     } else {
         //console.log ("NOT Logged in");
