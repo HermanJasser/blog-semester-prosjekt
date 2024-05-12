@@ -34,9 +34,9 @@
       <h1>Ny post</h1>
       <form id="add-post-form">
         <label for="title">Tittel</label>
-        <input name="title" type="text" required />
+        <input id="title" name="title" type="text" required />
 
-        <label for="content">Innhold</label>
+        <label for="add-post-content">Innhold</label>
         <textarea
           name="content"
           id="add-post-content"
@@ -45,10 +45,10 @@
         ></textarea>
 
         <label for="img">Bilde (URL)</label>
-        <input name="img" type="url" required />
+        <input id="img" name="img" type="url" required />
 
         <label for="alt">Gi bilde en beskrivelse</label>
-        <input name="alt" type="text" required />
+        <input id="alt" name="alt" type="text" required />
 
         <button class="cta-button" type="submit">Legg ut</button>
       </form>
