@@ -19,7 +19,7 @@
         });
     } else {
         //console.log ("NOT Logged in");
-        if(window.location.pathname.includes("/index.html") || window.location.pathname == "/" || window.location.pathname == ""){
+        if(window.location.pathname.includes("/index.html") || window.location.pathname === "/blog-semester-prosjekt/" || window.location.pathname == "/blog-semester-prosjekt"){
         loggedInOut.innerHTML = `<a href="./account/login.html">Log in</a>`;
         } else{
             loggedInOut.innerHTML = `<a href="../account/login.html">Log inn</a>`
