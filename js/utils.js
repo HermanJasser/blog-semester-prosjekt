@@ -9,7 +9,11 @@
 
     if (token && username) {
         //console.log ("Logged in");
+        if(window.location.pathname.includes("/index.html") || window.location.pathname === "/blog-semester-prosjekt/" || window.location.pathname == "/blog-semester-prosjekt"){
+            loggedInOut.innerHTML = `<a href="./account/mypage.html">Min side</a>`;
+        } else{
         loggedInOut.innerHTML = `<a href="../account/mypage.html">Min side</a>`;
+        }
         logOutBtn.innerHTML = `<button id="logout">Log out</button>`;
         logOutBtn.style.display = "block";
         document.querySelector("button#logout").addEventListener("click", () => {
@@ -20,7 +24,7 @@
     } else {
         //console.log ("NOT Logged in");
         if(window.location.pathname.includes("/index.html") || window.location.pathname === "/blog-semester-prosjekt/" || window.location.pathname == "/blog-semester-prosjekt"){
-        loggedInOut.innerHTML = `<a href="./account/login.html">Log in</a>`;
+        loggedInOut.innerHTML = `<a href="./account/login.html">Log inn</a>`;
         } else{
             loggedInOut.innerHTML = `<a href="../account/login.html">Log inn</a>`
         }
