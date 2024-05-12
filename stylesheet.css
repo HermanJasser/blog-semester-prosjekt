@@ -222,8 +222,6 @@ transform: scale(1.1);
 /*kode for main elementer*/
 main{
     padding: 100px 0;
-    
-
 }
 
 #main-login{
@@ -248,7 +246,7 @@ main{
     overflow: hidden;
     height: 45vw;
     max-height: 700px;/**/
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
     
 }
 #slideshow-cont{
@@ -321,6 +319,66 @@ right: 10px;
     -color: var(--white);
 }
 
+/*dette er for nye psot på index siden*/
+
+#new-posts-cont{
+    display: grid;
+    grid-template-columns: 38% 27% 35%;
+    margin: 0 auto;
+    padding: 0 var(--inline-margin-big-desktop);
+    max-width: 1400px;
+}
+
+#new-posts-cont h2{
+    font-size: 30px;
+}
+
+#new-posts-cont p{
+    margin: 10px 0;
+}
+
+#new-posts-cont a{
+text-decoration: none;
+}
+
+.post-2-3-cont{
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post-2-3-cont > a{
+padding: 10px 0;
+}
+
+.post-1, .post-4{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+} 
+
+#new-posts-cont h2{
+    margin: 0;
+}
+
+.post-1 img, .post-4 img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.post-1{
+    border-right: var(--dark-blue) solid 2px;
+}
+
+.post-2{
+    border-bottom: var(--dark-blue) solid 2px;
+}
+
+.post-4{
+    border-left: var(--dark-blue) solid 2px;
+}
 
 
 /*dette er for login siden*/
@@ -548,6 +606,12 @@ text-align: center;
         padding: 0 var(--inline-margin-tablet-desktop);
     }
 
+    #new-posts-cont{
+      
+        padding: 0 var(--inline-margin-tablet-desktop);
+      
+    }
+
     /*dette er for slidere*/
     .single-slide-info-cont{
         width: 200px;
@@ -559,6 +623,47 @@ text-align: center;
     .single-slide-info-cont > a{
         font-size: 20px;
         padding: 8px 30px;
+    }
+
+    /*Dette er for nye posts på index siden*/
+
+    #new-posts-cont{
+        grid-template-columns: auto;
+      
+    }
+    
+   
+    
+    .post-2-3-cont{
+        padding: 20px;
+        flex-direction: row;
+    }
+    
+    .post-2-3-cont > a{
+    padding: 10px ;
+    text-align: center;
+    }
+    
+    .post-1, .post-4{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    } 
+    
+    
+    .post-1{
+        border-right: none;
+        border-bottom: var(--dark-blue) solid 2px;
+    }
+    
+    .post-2{
+        border-bottom: none;
+        border-right: var(--dark-blue) solid 2px;
+    }
+    
+    .post-4{
+        border-left: none;
+        border-top: var(--dark-blue) solid 2px;
     }
 }
 
@@ -583,6 +688,10 @@ text-align: center;
 
     .single-post-title{
         font-size: 20px;
+    }
+
+    main{
+        padding-bottom: 50px;
     }
 
     #main-single-post > div > h1{
@@ -677,6 +786,22 @@ text-align: center;
         grid-template-columns: 1fr 1fr;
     }
 
+    /*dette er for nye posts på index siden*/
+    .post-2{
+        border-bottom: var(--dark-blue) solid 2px;
+        border-right: none;
+    }
+
+    .post-2-3-cont{
+        padding: 0 ;
+        flex-direction: column;
+    }
+    
+    .post-2-3-cont > a{
+    padding: 10px ;
+    text-align: center;
+    }
+
 }
 
 
@@ -715,6 +840,12 @@ text-align: center;
         padding: 0  var(--inline-margin-phone) !important;
     }
 
+    #new-posts-cont{
+      
+        padding: 0 var(--inline-margin-phone);
+      
+    }
+
     /*dette her er for slideren*/
     .single-slide-info-cont{
         width: 100px !important;
@@ -727,5 +858,9 @@ text-align: center;
     .single-slide-info-cont > a{
         font-size: 10px !important;
         padding: 4px 15px !important;
+    }
+
+    #slideshow{
+        margin-bottom: 25px;
     }
 }
