@@ -9,7 +9,7 @@
 
     if (token && username) {
         //console.log ("Logged in");
-        loggedInOut.innerHTML = `<a href="../account/mypage.html">Min side</a>`;
+        loggedInOut.innerHTML = `<a href="/account/mypage.html">Min side</a>`;
         logOutBtn.innerHTML = `<button id="logout">Log out</button>`;
         logOutBtn.style.display = "block";
         document.querySelector("button#logout").addEventListener("click", () => {
@@ -30,7 +30,7 @@ export const loggedInAccess = () => {
     let username = localStorage.getItem("username"); 
 if (!token && !username){
     //console.log("not logged in");
-    window.location = "login.html"; // Automatic
+    window.location = "/login.html"; // Automatic
 }
 }
 
