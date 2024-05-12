@@ -505,7 +505,6 @@ text-align: center;
 /*dette er for posts siden*/
 
 .single-post{
-    width: 100%;
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -533,7 +532,6 @@ text-align: center;
 #all-posts{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
     margin: 0 var(--inline-margin-big-desktop);
     max-width: 1400px;
 }
