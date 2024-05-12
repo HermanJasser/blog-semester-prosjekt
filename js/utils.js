@@ -30,7 +30,7 @@ export const loggedInAccess = () => {
     let username = localStorage.getItem("username"); 
 if (!token && !username){
     //console.log("not logged in");
-    window.location = "../login.html"; // Automatic
+    window.location = "../account/login.html"; // Automatic
 }
 }
 
