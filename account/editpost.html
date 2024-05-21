@@ -1,61 +1,72 @@
 <!DOCTYPE html>
 <html lang="no">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../stylesheet.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="rediger dine blogg poster" />
+    <meta
+      name="keywords"
+      content="skifeber, ski feber, slalom, norge, hemsedal, hafjell, trysil, alpint, ski, blog, ski blog, norges alper, carving, geilo, voss, tryvann, myrkdal, eventyr i norske snølandskap"
+    />
+    <link rel="stylesheet" href="../stylesheet.css" />
     <script src="../js/editpost.js" type="module"></script>
-       <!-- <script src="./js/utils.js" defer></script>-->
+    <!-- <script src="./js/utils.js" defer></script>-->
     <title>Rediger posts</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <a class="logo" href="../index.html"
-          >Ski feber
-          <h3>Eventyr i norske snølandskap</h3></a>
-          <!--Brukte denne guiden som hjelp for naven https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci-->
-        <nav class="header-nav">
-          <ul class="nav-menu">
-            <li class="nav-link"><a href="../index.html">Hjem</a></li>
-            <li class="nav-link"><a href="../post/posts.html">Blog</a></li>
-            <li class="choosen nav-link" id="logged-in-out">Laster...</li>
-            <li class="nav-link" id="log-out-btn-cont">laster...</li>
-          </ul>
-    
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </nav>
-      </header>
-    <main id="main-edit-post">
-        <h1>Rediger posten din</h1>
-        <form id="edit-post-form">
-            <label for="title">Tittel</label>
-            <input id="title" name="title" type="text" required>
-
-            <label for="edit-post-content">Innhold</label>
-            <textarea name="content" id="edit-post-content" maxlength ="2000" required></textarea>
-            
-            <label for="img">Link til bilde</label>
-            <input id="img" name="img" type="url" required>
-
-            <label for="alt">Gi bilde en beskrivelse</label>
-            <input id="alt" name="alt" type="text" required>
-
-            <button class="cta-button" type="submit">Legg ut</button>
-        </form>
-    </main>
-    <footer>
-        <a class="logo" href="../index.html"
+      <a class="logo" href="../index.html"
         >Ski feber
         <h3>Eventyr i norske snølandskap</h3></a
       >
-    <nav class="footer-nav">
-      <a href="../index.html">Hjem</a>
-      <a href="../post/posts.html">Blog</a>
+      <!--Brukte denne guiden som hjelp for naven https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci-->
+      <nav class="header-nav">
+        <ul class="nav-menu">
+          <li class="nav-link"><a href="../index.html">Hjem</a></li>
+          <li class="nav-link"><a href="../post/posts.html">Blog</a></li>
+          <li class="choosen nav-link" id="logged-in-out">Laster...</li>
+          <li class="nav-link" id="log-out-btn-cont">laster...</li>
+        </ul>
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <main id="main-edit-post">
+      <h1>Rediger posten din</h1>
+      <form id="edit-post-form">
+        <label for="title">Tittel</label>
+        <input id="title" name="title" type="text" required />
+
+        <label for="edit-post-content">Innhold</label>
+        <textarea
+          name="content"
+          id="edit-post-content"
+          maxlength="2000"
+          required
+        ></textarea>
+
+        <label for="img">Link til bilde</label>
+        <input id="img" name="img" type="url" required />
+
+        <label for="alt">Gi bilde en beskrivelse</label>
+        <input id="alt" name="alt" type="text" required />
+
+        <button class="cta-button" type="submit">Legg ut</button>
+      </form>
+    </main>
+    <footer>
+      <a class="logo" href="../index.html"
+        >Ski feber
+        <h3>Eventyr i norske snølandskap</h3></a
+      >
+      <nav class="footer-nav">
+        <a href="../index.html">Hjem</a>
+        <a href="../post/posts.html">Blog</a>
       </nav>
     </footer>
-</body>
+  </body>
 </html>
