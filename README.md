@@ -1,6 +1,6 @@
 # Blog semester project
 
-gitpages: 
+Git pages: https://hermanjasser.github.io/blog-semester-prosjekt/
 
 ![image](https://github.com/HermanJasser/folder-for-images/blob/main/img/skifeber-blog-screenshot.png)
 
